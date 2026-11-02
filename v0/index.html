@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Kangcheng Hou — statistical genetics, polygenic risk prediction, and complex disease genomics.">
+    <title>Kangcheng Hou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a class="brand" href="#intro">Kangcheng Hou</a>
+            <div class="nav-links">
+                <a href="#selected-works">Selected recent work</a>
+                <a href="../assets/cv.pdf" target="_blank" rel="noopener">CV</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section class="intro section" id="intro">
+            <aside class="portrait-wrap" aria-label="Profile and contact links">
+                <img class="portrait" src="../assets/photo.jpg" alt="Headshot of Kangcheng Hou">
+                <div class="profile-meta">
+                    <h1>Kangcheng Hou</h1>
+                    <p class="profile-email">
+                        <a href="mailto:[firstname][lastname]@gmail.com">[firstname][lastname]@gmail.com</a>
+                    </p>
+                    <div class="profile-links" aria-label="External profiles">
+                        <a href="https://github.com/KangchengHou">GitHub</a>
+                        <span aria-hidden="true">|</span>
+                        <a href="https://scholar.google.com/citations?user=IURWCt4AAAAJ&amp;hl=en">Google Scholar</a>
+                    </div>
+                </div>
+            </aside>
+            <div class="intro-text">
+                <p>
+                    I work on statistical genetics. I am currently a postdoctoral fellow at the Broad Institute,
+                    Harvard T.H. Chan School of Public Health, and Harvard Medical School, mentored by <a
+                        href="https://oconnorlab.hms.harvard.edu/">Luke O'Connor</a> and <a
+                        href="https://hsph.harvard.edu/research/price-lab/">Alkes Price</a>. I received my PhD in
+                    Bioinformatics from UCLA, advised by <a href="https://www.med.upenn.edu/bogdan-group/">Bogdan
+                        Pasaniuc</a>. Before that, I studied Computer Science at Zhejiang University.
+                </p>
+                <p>
+                    My research focuses on understanding how genetic variation shapes human phenotypes and diseases and
+                    applying these insights to identify causal genes, biological mechanisms, and therapeutic
+                    opportunities. Rapidly expanding population-scale datasets that link genetic variation to rich
+                    phenotypic information make it possible to study naturally occurring perturbations of human biology
+                    at scale. I develop computational and statistical methods to extract reliable insights from these
+                    complex genetic, proteomic, and functional genomic data.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="selected-works" aria-labelledby="works-title">
+            <h2 id="works-title">Selected recent work</h2>
+
+            <div class="direction-list">
+                <article class="direction-item">
+                    <h3>Linking protein variation to disease mechanisms</h3>
+                    <p>
+                        Until recently, our ability to jointly profile protein abundance and common and rare genetic
+                        variation at population scale was limited. My work uses these emerging data to connect genetics
+                        to proteins to disease by studying how
+                        <a class="paper-link" href="https://doi.org/10.64898/2026.04.24.26351667" target="_blank"
+                            rel="noopener"
+                            data-paper-title="Functionally informed cis and trans proteome-wide association studies prioritize disease-critical genes"
+                            data-paper-citation="Hou K et al. (2026). medRxiv.">local and distal genetic variation shapes protein abundance</a>
+                        and how
+                        <span class="paper-link paper-link-unpublished" tabindex="0"
+                            data-paper-title="Functional architecture of rare protein coding variation across 786,871 exomes"
+                            data-paper-citation="Hou K et al. In preparation.">coding mutations alter protein function</span>,
+                        to prioritize causal genes and disease mechanisms.
+                    </p>
+                    <img class="direction-figure" src="../assets/research-protein.jpg"
+                        alt="Local, distal, and coding genetic variation converging on proteins and disease"
+                        width="800" height="600" loading="lazy" decoding="async">
+                </article>
+                <article class="direction-item">
+                    <h3>Predicting disease with polygenic scores</h3>
+                    <p>
+                        Polygenic scores combine variants across a person's genome, weighting each by its estimated
+                        effect, and have the potential to improve estimates of lifetime disease risk. Using these scores
+                        in clinical decisions requires knowing how much confidence to place in each individual's
+                        prediction. My work develops
+                        <a class="paper-link" href="https://doi.org/10.1038/s41588-021-00961-5" target="_blank"
+                            rel="noopener"
+                            data-paper-title="Large uncertainty in individual polygenic risk score estimation impacts PRS-based risk stratification"
+                            data-paper-citation="Ding Y†, Hou K† et al. (2022). Nature Genetics.">uncertainty metrics</a>
+                        that quantify this
+                        reliability across
+                        <a class="paper-link" href="https://doi.org/10.1038/s41586-023-06079-4" target="_blank"
+                            rel="noopener"
+                            data-paper-title="Polygenic scoring accuracy varies across the genetic ancestry continuum"
+                            data-paper-citation="Ding Y, Hou K et al. (2023). Nature.">ancestry backgrounds</a>
+                        and
+                        <a class="paper-link" href="https://doi.org/10.1038/s41588-024-01792-w" target="_blank"
+                            rel="noopener"
+                            data-paper-title="Calibrated prediction intervals for polygenic scores across diverse contexts"
+                            data-paper-citation="Hou K et al. (2024). Nature Genetics.">socio-environmental contexts</a>.
+                    </p>
+                    <img class="direction-figure" src="../assets/research-polygenic-score.jpg"
+                        alt="Genetic variants combined into a polygenic score and an individual risk estimate with uncertainty"
+                        width="800" height="600" loading="lazy" decoding="async">
+                </article>
+                <article class="direction-item">
+                    <h3>Learning genetic architecture from biobanks</h3>
+                    <p>
+                        Biobanks link genetic and health data at population scale, enabling us to study the genetic
+                        architecture of complex traits. Their scale and diversity require statistical methods that
+                        remain accurate across study sizes, ancestry backgrounds, and genetic architectures. I develop
+                        methods to measure how much
+                        <a class="paper-link" href="https://doi.org/10.1038/s41588-019-0465-0" target="_blank"
+                            rel="noopener"
+                            data-paper-title="Accurate estimation of SNP-heritability from biobank-scale data irrespective of genetic architecture"
+                            data-paper-citation="Hou K et al. (2019). Nature Genetics.">common genetic variation</a>
+                        contributes to
+                        traits, test whether genetic effects are shared across
+                        <a class="paper-link" href="https://doi.org/10.1038/s41588-023-01338-6" target="_blank"
+                            rel="noopener"
+                            data-paper-title="Causal effects on complex traits are similar for common variants across segments of different continental ancestries within admixed individuals"
+                            data-paper-citation="Hou K et al. (2023). Nature Genetics.">ancestry backgrounds</a>,
+                        and map
+                        heritability across
+                        <a class="paper-link" href="https://doi.org/10.1016/j.ajhg.2022.02.012" target="_blank"
+                            rel="noopener"
+                            data-paper-title="Partitioning gene-level contributions to complex-trait heritability by allele frequency identifies disease-relevant genes"
+                            data-paper-citation="Burch KS†, Hou K† et al. (2022). The American Journal of Human Genetics.">genes and allele frequencies</a>
+                        to
+                        prioritize disease-relevant genes.
+                    </p>
+                    <img class="direction-figure" src="../assets/research-biobank.jpg"
+                        alt="Biobank data used to study heritability, ancestry, and disease-relevant genes" width="800"
+                        height="600" loading="lazy" decoding="async">
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <aside class="paper-preview" id="paper-preview" role="dialog" aria-label="Paper citation" hidden>
+        <div class="paper-preview-heading">
+            <strong class="paper-preview-title"></strong><a class="paper-preview-format" target="_blank"
+                rel="noopener">[HTML]</a>
+        </div>
+        <span class="paper-preview-citation"></span>
+    </aside>
+
+    <script>
+        const preview = document.querySelector('.paper-preview');
+        const previewTitle = preview.querySelector('.paper-preview-title');
+        const previewFormat = preview.querySelector('.paper-preview-format');
+        const previewCitation = preview.querySelector('.paper-preview-citation');
+        let activeLink;
+        let hideTimer;
+
+        function cancelHidePaperPreview() {
+            window.clearTimeout(hideTimer);
+        }
+
+        function hidePaperPreview() {
+            cancelHidePaperPreview();
+            preview.hidden = true;
+            activeLink?.setAttribute('aria-expanded', 'false');
+            activeLink = undefined;
+        }
+
+        function scheduleHidePaperPreview() {
+            cancelHidePaperPreview();
+            hideTimer = window.setTimeout(hidePaperPreview, 180);
+        }
+
+        function showPaperPreview(link) {
+            cancelHidePaperPreview();
+            activeLink?.setAttribute('aria-expanded', 'false');
+            activeLink = link;
+            link.setAttribute('aria-expanded', 'true');
+
+            previewTitle.textContent = link.dataset.paperTitle;
+            const paperUrl = link.getAttribute('href');
+            if (paperUrl) {
+                previewFormat.href = paperUrl;
+                previewFormat.hidden = false;
+            } else {
+                previewFormat.removeAttribute('href');
+                previewFormat.hidden = true;
+            }
+
+            const [beforeName, afterName] = link.dataset.paperCitation.split('Hou K');
+            const highlightedName = document.createElement('span');
+            highlightedName.className = 'paper-preview-me';
+            highlightedName.textContent = 'Hou K';
+            previewCitation.replaceChildren(beforeName, highlightedName, afterName);
+            preview.hidden = false;
+
+            const linkRect = link.getBoundingClientRect();
+            const previewRect = preview.getBoundingClientRect();
+            const left = Math.min(
+                window.innerWidth - previewRect.width - 12,
+                Math.max(12, linkRect.left + (linkRect.width - previewRect.width) / 2)
+            );
+            const top = linkRect.top > previewRect.height + 20
+                ? linkRect.top - previewRect.height - 8
+                : linkRect.bottom + 8;
+
+            preview.style.left = `${left}px`;
+            preview.style.top = `${top}px`;
+        }
+
+        document.querySelectorAll('.paper-link').forEach((link) => {
+            link.setAttribute('aria-controls', 'paper-preview');
+            link.setAttribute('aria-expanded', 'false');
+            link.addEventListener('focus', () => showPaperPreview(link));
+            link.addEventListener('blur', scheduleHidePaperPreview);
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                showPaperPreview(link);
+                if (event.detail === 0 && previewFormat.hasAttribute('href')) {
+                    previewFormat.focus();
+                }
+            });
+            link.addEventListener('keydown', (event) => {
+                if (link.tagName !== 'A' && (event.key === 'Enter' || event.key === ' ')) {
+                    event.preventDefault();
+                    showPaperPreview(link);
+                }
+            });
+        });
+
+        preview.addEventListener('focusin', cancelHidePaperPreview);
+        preview.addEventListener('focusout', scheduleHidePaperPreview);
+        previewFormat.addEventListener('click', () => window.setTimeout(hidePaperPreview));
+
+        document.addEventListener('pointerdown', (event) => {
+            if (!preview.hidden && !preview.contains(event.target) && !activeLink?.contains(event.target)) {
+                hidePaperPreview();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !preview.hidden) {
+                const link = activeLink;
+                hidePaperPreview();
+                link?.focus();
+            }
+        });
+    </script>
+</body>
+
+</html>
